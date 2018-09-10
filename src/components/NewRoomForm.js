@@ -2,9 +2,9 @@ import React from 'react'
 
 class NewRoomForm extends React.Component {
 
-  constructor(){
+  constructor() {
     super()
-    this.setState = {
+    this.state = {
       roomName: ''
     }
     this.handleChange = this.handleChange.bind(this)
@@ -17,10 +17,10 @@ class NewRoomForm extends React.Component {
     })
   }
 
-  handleSubmit(e){
+  handleSubmit(e) {
     e.preventDefault()
     this.props.createRoom(this.state.roomName)
-    this.setState({roomName: ''})
+    this.setState({ roomName: '' })
   }
 
   render() {
